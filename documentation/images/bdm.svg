@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="230px" preserveAspectRatio="none" style="width:494px;height:230px;" version="1.1" viewBox="0 0 494 230" width="494px" zoomAndPan="magnify"><defs><filter height="300%" id="f1cq2ktoo057es" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#DDDDDD" height="26.4883" rx="5" ry="5" style="stroke: #000000; stroke-width: 1.0;" width="475" x="8" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="463" x="14" y="26.5352">♦ Composition relation  ♢ Aggregation relation  * Multiple relation</text><!--MD5=[bc580992a0121350dbeb037df29eb0ce]
+cluster com.company.model--><polygon fill="#FFFFFF" filter="url(#f1cq2ktoo057es)" points="150,67.4883,301,67.4883,308,89.9766,330,89.9766,330,218.4883,150,218.4883,150,67.4883" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="150" x2="308" y1="89.9766" y2="89.9766"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="145" x="154" y="83.0234">com.company.model</text><!--MD5=[2ce0c9fb7f55b1e256ab28a8ea6b25ec]
+class Customer--><rect fill="#FEFECE" filter="url(#f1cq2ktoo057es)" height="99.8203" id="Customer" style="stroke: #A80036; stroke-width: 1.5;" width="148" x="166" y="102.4883"/><ellipse cx="208.45" cy="118.4883" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M210.9231,124.6313 Q210.3421,124.9302 209.7029,125.0796 Q209.0638,125.229 208.3582,125.229 Q205.8514,125.229 204.5315,123.5771 Q203.2117,121.9253 203.2117,118.8042 Q203.2117,115.6748 204.5315,114.0229 Q205.8514,112.3711 208.3582,112.3711 Q209.0638,112.3711 209.7112,112.5205 Q210.3587,112.6699 210.9231,112.9688 L210.9231,115.6914 Q210.2923,115.1104 209.6988,114.8406 Q209.1053,114.5708 208.4744,114.5708 Q207.1297,114.5708 206.4449,115.6375 Q205.7601,116.7041 205.7601,118.8042 Q205.7601,120.896 206.4449,121.9626 Q207.1297,123.0293 208.4744,123.0293 Q209.1053,123.0293 209.6988,122.7595 Q210.2923,122.4897 210.9231,121.9087 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="228.55" y="123.0234">Customer</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="167" x2="313" y1="134.4883" y2="134.4883"/><ellipse cx="177" cy="145.4883" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="186" y="149.123">persistenceId : Long</text><ellipse cx="177" cy="158.4434" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="70" x="186" y="162.0781">name : String</text><ellipse cx="177" cy="171.3984" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="122" x="186" y="175.0332">dateOfBirth : LocalDate</text><ellipse cx="177" cy="184.3535" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="75" x="186" y="187.9883">income : Long</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="167" x2="313" y1="194.3086" y2="194.3086"/><!--MD5=[b3c05631c337566aeff0891615197410]
+@startuml
+
+package com.company.model {
+
+    class Customer {
+        +persistenceId : Long
+        +name : String
+        +dateOfBirth : LocalDate
+        +income : Long
+    }
+
+}
+
+
+legend top left
+&#9830; Composition relation  &#9826; Aggregation relation  &#42; Multiple relation
+endlegend
+
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 12:02:15 CEST 2019)
+(EPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.9+11
+Operating System: Mac OS X
+Default Encoding: UTF8
+Language: fr
+Country: FR
+--></g></svg>

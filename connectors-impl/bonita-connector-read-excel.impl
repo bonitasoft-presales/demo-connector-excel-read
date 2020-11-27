@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>bonita-connector-read-excel-impl</implementationId> <!-- Id of the implementation -->
+  <implementationVersion>1.1</implementationVersion> <!-- Version of the implementation -->
+  <definitionId>bonita-connector-read-excel</definitionId> <!-- Id of the definition implemented -->
+  <definitionVersion>1.0</definitionVersion> <!-- Version of the definition implemented -->
+  <implementationClassname>com.bonitasoft.connector.BonitaReadExcelConnector</implementationClassname> <!-- Path to the main implementation class -->
+  <description>Default bonita-connector-read-excel implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+<jarDependencies>
+  <jarDependency>bonita-connector-read-excel-1.1.jar</jarDependency>
+  <jarDependency>SparseBitSet-1.2.jar</jarDependency>
+  <jarDependency>commons-codec-1.13.jar</jarDependency>
+  <jarDependency>commons-collections4-4.4.jar</jarDependency>
+  <jarDependency>commons-compress-1.19.jar</jarDependency>
+  <jarDependency>commons-math3-3.6.1.jar</jarDependency>
+  <jarDependency>curvesapi-1.06.jar</jarDependency>
+  <jarDependency>poi-4.1.2.jar</jarDependency>
+  <jarDependency>poi-ooxml-4.1.2.jar</jarDependency>
+  <jarDependency>poi-ooxml-schemas-4.1.2.jar</jarDependency>
+  <jarDependency>xmlbeans-3.1.0.jar</jarDependency>
+</jarDependencies>
+
+</implementation:connectorImplementation>

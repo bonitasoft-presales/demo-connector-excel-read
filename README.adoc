@@ -1,0 +1,176 @@
+= demo-excel-read-connector
+Generated with Bonita
+v7.11.2, {docdate}
+:toc: left
+:toc-title: Table of contents
+:toclevels: 2
+:bonita-version: 7.11
+:imagesdir: ./documentation/images
+:icons: font
+:sectnums: numbered
+:sectanchors:
+:hardbreaks:
+:experimental:
+
+== Business Data Model
+
+image::bdm.svg[link=images/bdm.svg]
+
+=== Package com.company.model
+
+==== Customer
+
+_No description available_
+
+===== icon:list[] Attributes
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Name                                    |Type     |Description
+|[[Customer.persistenceId]]persistenceId*|Long     |           
+|[[Customer.name]]name                   |String   |           
+|[[Customer.dateOfBirth]]dateOfBirth     |LocalDate|           
+|[[Customer.income]]income               |Long     |           
+|===
+
+== Processes
+
+=== image:icons/Pool.png[title="Process"] [[_9cdab456-cd3c-3691-9ae2-385e55ca3e10]]readExcel (1.0)
+
+_No description available_
+
+image::processes/readExcel-1.0.png[]
+
+==== icon:users[] Actors
+
+[grid=cols,options="header",cols="1,3a",stripes=even,frame=topbot]
+|===
+|Name                                                                                               |Description                                                 
+|[[_57a4bbcd-c99e-3238-8d09-779ad3dbe70a]]Employee actor icon:play-circle[title="Process initiator"]|This is an example of actor that is mapped to any ACME users
+|===
+
+==== icon:file[] Documents
+
+[grid=cols,options="header",cols="1,3a",stripes=even,frame=topbot]
+|===
+|Name                                              |Description
+|[[_8c717bf9-6108-35a2-93ec-e0e118e03308]]excelFile|           
+|===
+
+==== image:icons/Lane.png[title="Lane"] Employee lane (<<_57a4bbcd-c99e-3238-8d09-779ad3dbe70a,icon:user[title="Actor"] Employee actor>>)
+
+_No description available_
+
+==== [[_6759365b-87cd-335f-aa0d-c1cd574cf0da]]image:icons/StartEvent.png[title="StartEvent"] Start1
+
+_No description available_
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_d89ae8db-b7d6-3bce-821d-0dcc29c7592e,Step1>>*
+
+==== [[_d89ae8db-b7d6-3bce-821d-0dcc29c7592e]]image:icons/ServiceTask.png[title="ServiceTask"] Step1
+
+_No description available_
+
+*Previous flow element(s)*: <<_6759365b-87cd-335f-aa0d-c1cd574cf0da,Start1>>
+
+===== icon:plug[] Connectors in
+
+*bonita-connector-read-excel: readExcelFile*
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_2ec8d60f-0d4e-39e5-8a93-da56df5ec09e,review>>*
+
+==== [[_2ec8d60f-0d4e-39e5-8a93-da56df5ec09e]]image:icons/Task.png[title="Task"] review
+
+_No description available_
+
+*Previous flow element(s)*: <<_d89ae8db-b7d6-3bce-821d-0dcc29c7592e,Step1>>
+
+===== icon:filter[] Actor filter
+
+*Initiator: initiator*
+
+===== [[_1a489b5d-ebde-3aca-8477-2c970881f7e1]]image:icons/page.png[] reviewExcelData
+
+Page generated with Bonita UI designer
+
+.Widgets
+[caption=,grid=cols,options="header",cols="1,2,4a",stripes=even,frame=topbot]
+|===
+|Type      |Label |Description
+|Title     |      |           
+|Text      |      |           
+|FileViewer|      |           
+|Title     |      |           
+|Table     |      |           
+|Button    |Submit|           
+|Text      |      |           
+|===
+
+===== icon:arrow-right[] Outgoing transition(s)
+
+*To <<_9cbbe8a3-dda2-35d3-b087-0b7c0a1d73e9,End1>>*
+
+==== [[_9cbbe8a3-dda2-35d3-b087-0b7c0a1d73e9]]image:icons/EndEvent.png[title="EndEvent"] End1
+
+_No description available_
+
+*Previous flow element(s)*: <<_2ec8d60f-0d4e-39e5-8a93-da56df5ec09e,review>>
+
+== Diagrams
+
+=== ReadExcel (1.0)
+
+_No description available_
+
+image::diagrams/ReadExcel-1.0.png[]
+
+== Organization
+
+=== Groups
+
+// Uncomment this line in organization_template.tpl to display the group hierarchy diagram.
+// image::groups.svg[link=images/groups.svg]
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Path                     |Display name          |Description                                                                         
+|/acme                    |Acme                  |This group represents the acme department of the ACME organization                  
+|/acme/hr                 |Human Resources       |This group represents the human resources department of the ACME organization       
+|/acme/finance            |Finance               |This group represents the finance department of the ACME organization               
+|/acme/it                 |Infrastructure        |This group represents the infrastructure department of the ACME organization        
+|/acme/marketing          |Marketing             |This group represents the marketing department of the ACME organization             
+|/acme/production         |Production            |This group represents the production department of the ACME organization            
+|/acme/production/rd      |Research & Development|This group represents the research & development department of the ACME organization
+|/acme/production/services|Services              |This group represents the services department of the ACME organization              
+|/acme/sales              |Sales                 |This group represents the sales department of the ACME organization                 
+|/acme/sales/europe       |Europe                |This group represents the europe department of the ACME organization                
+|/acme/sales/asia         |Asia                  |This group represents the asia department of the ACME organization                  
+|/acme/sales/latin_america|Latin America         |This group represents the latin america department of the ACME organization         
+|/acme/sales/north_america|North America         |This group represents the north america department of the ACME organization         
+|===
+
+=== Roles
+
+[grid=cols,options="header",cols="1,1e,3a",stripes=even,frame=topbot]
+|===
+|Name  |Display name|Description
+|member|Member      |           
+|===
+
+=== Profiles
+
+[grid=cols,options="header",cols="1e,3a",stripes=even,frame=topbot]
+|===
+|Name                                                    |Description                                                          
+|[[_1300bb05-3afe-3c2d-af8b-543b4fb16c32]]User           |The user can view and perform tasks and can start a new case of a
+                                                          process.    
+|[[_080d4ce6-9f34-37f2-a270-2edb021a60ec]]Administrator  |The administrator can install a process, manage the organization, and
+                                                          handle some errors (for example, by replaying a task).
+|[[_ec4b68ef-adbc-302e-8811-94d9a8fc9032]]Process manager|The Process manager can supervise designated processes, and manage
+                                                          cases and tasks of those processes.   
+|===
+
